@@ -79,7 +79,7 @@ export default function Home() {
       <HeroSection />
       
       {/* Featured Tools Section */}
-      <section id="tools" className="py-12 sm:py-20 bg-white">
+      <section id="tools" className="py-16 sm:py-24 bg-gradient-to-br from-white via-purple-50/30 to-blue-50/30">
         <div className="max-w-7xl mx-auto mobile-optimized">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-heading">Professional Color Tools</h2>
@@ -87,13 +87,13 @@ export default function Home() {
           </div>
           
           <Tabs defaultValue="picker" className="w-full">
-            <TabsList className="grid grid-cols-3 lg:grid-cols-6 w-full mb-8 gap-1 p-1">
-              <TabsTrigger value="picker" className="text-xs sm:text-sm px-2 py-2 font-display">Color Picker</TabsTrigger>
-              <TabsTrigger value="harmony" className="text-xs sm:text-sm px-2 py-2 font-display">Harmony</TabsTrigger>
-              <TabsTrigger value="accessibility" className="text-xs sm:text-sm px-2 py-2 font-display">Accessibility</TabsTrigger>
-              <TabsTrigger value="extractor" className="text-xs sm:text-sm px-2 py-2 font-display">Image Extract</TabsTrigger>
-              <TabsTrigger value="converter" className="text-xs sm:text-sm px-2 py-2 font-display">Converter</TabsTrigger>
-              <TabsTrigger value="generator" className="text-xs sm:text-sm px-2 py-2 font-display">Palette Gen</TabsTrigger>
+            <TabsList className="grid grid-cols-3 lg:grid-cols-6 w-full mb-12 gap-2 p-2 bg-white/60 backdrop-blur-sm border border-white/50 rounded-2xl shadow-lg">
+              <TabsTrigger value="picker" className="text-xs sm:text-sm px-3 py-3 font-display font-semibold rounded-xl data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:to-pink-600 data-[state=active]:text-white transition-all duration-300 hover:bg-purple-50">Color Picker</TabsTrigger>
+              <TabsTrigger value="harmony" className="text-xs sm:text-sm px-3 py-3 font-display font-semibold rounded-xl data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:to-pink-600 data-[state=active]:text-white transition-all duration-300 hover:bg-purple-50">Harmony</TabsTrigger>
+              <TabsTrigger value="accessibility" className="text-xs sm:text-sm px-3 py-3 font-display font-semibold rounded-xl data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:to-pink-600 data-[state=active]:text-white transition-all duration-300 hover:bg-purple-50">Accessibility</TabsTrigger>
+              <TabsTrigger value="extractor" className="text-xs sm:text-sm px-3 py-3 font-display font-semibold rounded-xl data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:to-pink-600 data-[state=active]:text-white transition-all duration-300 hover:bg-purple-50">Image Extract</TabsTrigger>
+              <TabsTrigger value="converter" className="text-xs sm:text-sm px-3 py-3 font-display font-semibold rounded-xl data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:to-pink-600 data-[state=active]:text-white transition-all duration-300 hover:bg-purple-50">Converter</TabsTrigger>
+              <TabsTrigger value="generator" className="text-xs sm:text-sm px-3 py-3 font-display font-semibold rounded-xl data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:to-pink-600 data-[state=active]:text-white transition-all duration-300 hover:bg-purple-50">Palette Gen</TabsTrigger>
             </TabsList>
             
             <TabsContent value="picker">
@@ -124,7 +124,7 @@ export default function Home() {
       </section>
 
       {/* Gradient Generator Section */}
-      <section id="gradients" className="py-12 sm:py-20 bg-gray-50">
+      <section id="gradients" className="py-16 sm:py-24 bg-gradient-to-br from-gray-50 via-white to-purple-50/40">
         <div className="max-w-7xl mx-auto mobile-optimized">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-heading">Gradient Generator</h2>
@@ -136,7 +136,7 @@ export default function Home() {
       </section>
 
       {/* Color Palettes Section */}
-      <section id="palettes" className="py-12 sm:py-20 bg-white">
+      <section id="palettes" className="py-16 sm:py-24 bg-gradient-to-br from-white via-blue-50/20 to-purple-50/30">
         <div className="max-w-7xl mx-auto mobile-optimized">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-12 sm:mb-16 space-y-6 sm:space-y-0">
             <div>
