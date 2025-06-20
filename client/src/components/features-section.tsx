@@ -4,38 +4,38 @@ export default function FeaturesSection() {
   const features = [
     {
       icon: Palette,
-      title: "Advanced Color Tools",
-      description: "Professional color picker, palette generator, and harmony tools for precise color selection.",
+      title: "AI-Powered Generation",
+      description: "Generate perfect color palettes with AI using themes like nature, vintage, modern, and more.",
       color: "indigo"
     },
     {
       icon: Code,
-      title: "Export Ready Code",
-      description: "Get CSS, SCSS, and other format code instantly. Copy and paste directly into your projects.",
+      title: "Image Color Extraction",
+      description: "Upload any image and extract dominant colors to create beautiful palettes instantly.",
       color: "green"
     },
     {
       icon: Heart,
-      title: "Save Favorites",
-      description: "Build your personal color library and access your favorite palettes anywhere, anytime.",
+      title: "Color Harmony Tools",
+      description: "Create complementary, triadic, and analogous color schemes with mathematical precision.",
       color: "pink"
     },
     {
       icon: Eye,
-      title: "Accessibility Check",
-      description: "Ensure your colors meet WCAG guidelines with built-in contrast ratio checking.",
+      title: "Accessibility Checker",
+      description: "Test color combinations for WCAG compliance and color blindness accessibility.",
       color: "purple"
     },
     {
       icon: Smartphone,
-      title: "Mobile Optimized",
-      description: "Access all tools on any device with our responsive design and touch-friendly interface.",
+      title: "Advanced Converter",
+      description: "Convert between HEX, RGB, HSL, HSV, and CMYK formats with real-time preview.",
       color: "yellow"
     },
     {
       icon: Users,
-      title: "Community Driven",
-      description: "Share palettes with the community and discover trending colors from designers worldwide.",
+      title: "Mobile Optimized",
+      description: "Professional-grade tools optimized for all devices with touch-friendly interfaces.",
       color: "blue"
     }
   ];

@@ -67,34 +67,34 @@ export default function GradientGenerator() {
   };
 
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-lg">
+    <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg">
       {/* Gradient Preview */}
-      <div className="mb-8">
+      <div className="mb-6 sm:mb-8">
         <div 
-          className="h-48 rounded-xl mb-4"
+          className="h-32 sm:h-40 lg:h-48 rounded-xl mb-4"
           style={{ background: generateGradientCSS() }}
         ></div>
-        <div className="flex items-center justify-between">
-          <span className="text-sm font-medium text-gray-700">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-2 sm:space-y-0">
+          <span className="text-xs sm:text-sm font-medium text-gray-700">
             Direction: {direction}° | Type: {gradientType}
           </span>
-          <Button variant="ghost" size="sm" onClick={handleCopyCSS}>
-            <Code className="w-4 h-4 mr-1" />
+          <Button variant="ghost" size="sm" onClick={handleCopyCSS} className="text-xs sm:text-sm">
+            <Code className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
             Get CSS Code
           </Button>
         </div>
       </div>
       
       {/* Gradient Controls */}
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
         {/* Color Stops */}
         <div>
-          <h4 className="text-lg font-semibold text-gray-900 mb-4">Color Stops</h4>
-          <div className="space-y-4">
+          <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-4">Color Stops</h4>
+          <div className="space-y-3 sm:space-y-4">
             {colorStops.map((stop, index) => (
-              <div key={index} className="flex items-center space-x-4">
+              <div key={index} className="flex items-center space-x-2 sm:space-x-4">
                 <div 
-                  className="w-12 h-12 rounded-lg border-2 border-gray-300 cursor-pointer"
+                  className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-lg border-2 border-gray-300 cursor-pointer flex-shrink-0"
                   style={{ backgroundColor: stop.color }}
                   onClick={() => {
                     const input = document.createElement('input');
@@ -106,15 +106,15 @@ export default function GradientGenerator() {
                     input.click();
                   }}
                 ></div>
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <Input
                     type="text"
                     value={stop.color}
                     onChange={(e) => updateColorStop(index, 'color', e.target.value)}
-                    className="font-mono text-sm"
+                    className="font-mono text-xs sm:text-sm"
                   />
                 </div>
-                <div className="w-20">
+                <div className="w-16 sm:w-20">
                   <Slider
                     value={[stop.position]}
                     onValueChange={([value]) => updateColorStop(index, 'position', value)}
@@ -122,13 +122,14 @@ export default function GradientGenerator() {
                     step={1}
                     className="w-full"
                   />
-                  <span className="text-xs text-gray-500">{stop.position}%</span>
+                  <span className="text-xs text-gray-500 block text-center">{stop.position}%</span>
                 </div>
                 {colorStops.length > 2 && (
                   <Button
                     variant="ghost"
                     size="sm"
                     onClick={() => removeColorStop(index)}
+                    className="flex-shrink-0 text-lg"
                   >
                     ×
                   </Button>
@@ -140,21 +141,21 @@ export default function GradientGenerator() {
             variant="ghost" 
             size="sm" 
             onClick={addColorStop}
-            className="mt-4 text-indigo-600 hover:text-indigo-700"
+            className="mt-4 text-indigo-600 hover:text-indigo-700 text-xs sm:text-sm"
           >
-            <Plus className="w-4 h-4 mr-1" />
+            <Plus className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
             Add Color Stop
           </Button>
         </div>
         
         {/* Direction Controls */}
         <div>
-          <h4 className="text-lg font-semibold text-gray-900 mb-4">Direction & Type</h4>
+          <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-4">Direction & Type</h4>
           <div className="space-y-4">
             <div>
-              <Label className="block text-sm font-medium text-gray-700 mb-2">Gradient Type</Label>
+              <Label className="block text-xs sm:text-sm font-medium text-gray-700 mb-2">Gradient Type</Label>
               <Select value={gradientType} onValueChange={setGradientType}>
-                <SelectTrigger>
+                <SelectTrigger className="text-sm">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -166,7 +167,7 @@ export default function GradientGenerator() {
             </div>
             {gradientType === "linear" && (
               <div>
-                <Label className="block text-sm font-medium text-gray-700 mb-2">
+                <Label className="block text-xs sm:text-sm font-medium text-gray-700 mb-2">
                   Angle: {direction}°
                 </Label>
                 <Slider
@@ -182,7 +183,7 @@ export default function GradientGenerator() {
               <Button
                 variant="outline"
                 size="sm"
-                className="aspect-square"
+                className="aspect-square text-lg"
                 onClick={() => setDirection(0)}
               >
                 ↑
@@ -190,7 +191,7 @@ export default function GradientGenerator() {
               <Button
                 variant="outline"
                 size="sm"
-                className="aspect-square"
+                className="aspect-square text-lg"
                 onClick={() => setDirection(45)}
               >
                 ↗
@@ -198,7 +199,7 @@ export default function GradientGenerator() {
               <Button
                 variant="outline"
                 size="sm"
-                className="aspect-square"
+                className="aspect-square text-lg"
                 onClick={() => setDirection(90)}
               >
                 →
@@ -206,7 +207,7 @@ export default function GradientGenerator() {
               <Button
                 variant="outline"
                 size="sm"
-                className="aspect-square"
+                className="aspect-square text-lg"
                 onClick={() => setDirection(135)}
               >
                 ↘
@@ -217,22 +218,22 @@ export default function GradientGenerator() {
       </div>
       
       {/* Action Buttons */}
-      <div className="flex flex-wrap gap-4 mt-8 pt-8 border-t border-gray-200">
-        <Button className="bg-indigo-600 hover:bg-indigo-700">
-          <Download className="w-4 h-4 mr-2" />
+      <div className="flex flex-wrap gap-2 sm:gap-4 mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-200">
+        <Button className="bg-indigo-600 hover:bg-indigo-700 text-xs sm:text-sm flex-1 sm:flex-none">
+          <Download className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
           Export PNG
         </Button>
-        <Button variant="outline" onClick={handleCopyCSS}>
-          <Copy className="w-4 h-4 mr-2" />
+        <Button variant="outline" onClick={handleCopyCSS} className="text-xs sm:text-sm flex-1 sm:flex-none">
+          <Copy className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
           Copy CSS
         </Button>
-        <Button variant="outline">
-          <Heart className="w-4 h-4 mr-2" />
-          Save to Favorites
+        <Button variant="outline" className="text-xs sm:text-sm flex-1 sm:flex-none">
+          <Heart className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
+          Save
         </Button>
-        <Button variant="outline">
-          <Shuffle className="w-4 h-4 mr-2" />
-          Random Gradient
+        <Button variant="outline" className="text-xs sm:text-sm flex-1 sm:flex-none">
+          <Shuffle className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
+          Random
         </Button>
       </div>
     </div>

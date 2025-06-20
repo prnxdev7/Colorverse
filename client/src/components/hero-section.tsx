@@ -3,33 +3,33 @@ import { Palette, Play } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-12 sm:py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto mobile-optimized relative z-10">
         <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
             Discover Perfect{" "}
             <span className="gradient-bg bg-clip-text text-transparent">Colors</span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
             Create stunning color palettes, generate beautiful gradients, and find the perfect colors for your next project with our advanced color tools.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 transform hover:scale-105 transition-all">
-              <Palette className="w-5 h-5 mr-2" />
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+            <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 transform hover:scale-105 transition-all text-sm sm:text-base">
+              <Palette className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Start Creating
             </Button>
-            <Button variant="outline" size="lg" className="hover:bg-gray-50">
-              <Play className="w-5 h-5 mr-2" />
+            <Button variant="outline" size="lg" className="hover:bg-gray-50 text-sm sm:text-base">
+              <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Watch Demo
             </Button>
           </div>
         </div>
       </div>
       
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-16 h-16 bg-pink-400 rounded-full opacity-20 animate-float"></div>
-      <div className="absolute top-40 right-20 w-12 h-12 bg-blue-400 rounded-full opacity-20 animate-float" style={{ animationDelay: '-2s' }}></div>
-      <div className="absolute bottom-32 left-1/4 w-8 h-8 bg-yellow-400 rounded-full opacity-20 animate-float" style={{ animationDelay: '-4s' }}></div>
+      {/* Floating Elements - Hidden on mobile for better performance */}
+      <div className="hidden sm:block absolute top-20 left-10 w-12 h-12 lg:w-16 lg:h-16 bg-pink-400 rounded-full opacity-20 animate-float"></div>
+      <div className="hidden sm:block absolute top-40 right-20 w-8 h-8 lg:w-12 lg:h-12 bg-blue-400 rounded-full opacity-20 animate-float" style={{ animationDelay: '-2s' }}></div>
+      <div className="hidden sm:block absolute bottom-32 left-1/4 w-6 h-6 lg:w-8 lg:h-8 bg-yellow-400 rounded-full opacity-20 animate-float" style={{ animationDelay: '-4s' }}></div>
     </section>
   );
 }

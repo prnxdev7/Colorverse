@@ -82,6 +82,25 @@
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
+
+  .mobile-optimized {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .responsive-text {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  .card-hover {
+    @apply transform transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
 
 @keyframes gradient {
