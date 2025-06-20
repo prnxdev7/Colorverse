@@ -9,7 +9,7 @@ export default function HeroSection() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight font-display">
             <span className="block mb-3 sm:mb-4">Discover Perfect</span>
             <span className="animated-colors block transform hover:scale-105 transition-transform duration-300">
-              Colors
+              ColorVerse
             </span>
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto px-4 leading-relaxed">

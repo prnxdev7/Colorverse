@@ -59,7 +59,11 @@
   }
 
   .font-display {
-    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .font-heading {
+    font-family: 'Space Grotesk', 'Outfit', 'Inter', sans-serif;
   }
 }
 
@@ -131,7 +135,7 @@
     letter-spacing: -0.01em;
     position: relative;
     display: inline-block;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Outfit', sans-serif;
     margin-top: 0.5rem;
   }
 

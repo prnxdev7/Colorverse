@@ -83,18 +83,18 @@ export default function Home() {
       <section id="tools" className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto mobile-optimized">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Professional Color Tools</h2>
-            <p className="text-lg sm:text-xl text-gray-600 px-4">Complete toolkit for designers, developers, and creatives</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-heading">Professional Color Tools</h2>
+            <p className="text-lg sm:text-xl text-gray-600 px-4 font-display">Complete toolkit for designers, developers, and creatives</p>
           </div>
           
           <Tabs defaultValue="picker" className="w-full">
-            <TabsList className="grid grid-cols-3 lg:grid-cols-6 w-full mb-8">
-              <TabsTrigger value="picker" className="text-xs sm:text-sm">Color Picker</TabsTrigger>
-              <TabsTrigger value="harmony" className="text-xs sm:text-sm">Harmony</TabsTrigger>
-              <TabsTrigger value="accessibility" className="text-xs sm:text-sm">Accessibility</TabsTrigger>
-              <TabsTrigger value="extractor" className="text-xs sm:text-sm">Image Extract</TabsTrigger>
-              <TabsTrigger value="converter" className="text-xs sm:text-sm">Converter</TabsTrigger>
-              <TabsTrigger value="generator" className="text-xs sm:text-sm">AI Generator</TabsTrigger>
+            <TabsList className="grid grid-cols-3 lg:grid-cols-6 w-full mb-8 gap-1 p-1">
+              <TabsTrigger value="picker" className="text-xs sm:text-sm px-2 py-2 font-display">Color Picker</TabsTrigger>
+              <TabsTrigger value="harmony" className="text-xs sm:text-sm px-2 py-2 font-display">Harmony</TabsTrigger>
+              <TabsTrigger value="accessibility" className="text-xs sm:text-sm px-2 py-2 font-display">Accessibility</TabsTrigger>
+              <TabsTrigger value="extractor" className="text-xs sm:text-sm px-2 py-2 font-display">Image Extract</TabsTrigger>
+              <TabsTrigger value="converter" className="text-xs sm:text-sm px-2 py-2 font-display">Converter</TabsTrigger>
+              <TabsTrigger value="generator" className="text-xs sm:text-sm px-2 py-2 font-display">AI Generator</TabsTrigger>
             </TabsList>
             
             <TabsContent value="picker">
@@ -128,8 +128,8 @@ export default function Home() {
       <section id="gradients" className="py-12 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto mobile-optimized">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Gradient Generator</h2>
-            <p className="text-lg sm:text-xl text-gray-600 px-4">Create beautiful gradients with full control over colors and direction</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-heading">Gradient Generator</h2>
+            <p className="text-lg sm:text-xl text-gray-600 px-4 font-display">Create beautiful gradients with full control over colors and direction</p>
           </div>
           
           <GradientGenerator />
@@ -141,15 +141,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto mobile-optimized">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-12 sm:mb-16 space-y-6 sm:space-y-0">
             <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Beautiful Color Palettes</h2>
-              <p className="text-lg sm:text-xl text-gray-600">Curated collections of harmonious colors for your projects</p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-heading">Beautiful Color Palettes</h2>
+              <p className="text-lg sm:text-xl text-gray-600 font-display">Curated collections of harmonious colors for your projects</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Button className="bg-indigo-600 hover:bg-indigo-700 text-sm sm:text-base">
+              <Button className="bg-indigo-600 hover:bg-indigo-700 text-sm sm:text-base font-display">
                 <Plus className="w-4 h-4 mr-2" />
                 Create New
               </Button>
-              <Button variant="outline" className="text-sm sm:text-base">
+              <Button variant="outline" className="text-sm sm:text-base font-display">
                 <Shuffle className="w-4 h-4 mr-2" />
                 Generate Random
               </Button>
@@ -163,7 +163,7 @@ export default function Home() {
           </div>
           
           <div className="text-center mt-8 sm:mt-12">
-            <Button variant="outline" size="lg" className="text-sm sm:text-base">
+            <Button variant="outline" size="lg" className="text-sm sm:text-base font-display">
               Load More Palettes
             </Button>
           </div>

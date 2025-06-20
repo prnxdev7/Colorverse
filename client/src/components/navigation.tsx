@@ -18,7 +18,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 rounded-lg gradient-bg"></div>
-            <span className="text-xl font-bold text-gray-900">ColorCraft</span>
+            <span className="text-xl font-bold text-gray-900 font-display">ColorVerse</span>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
