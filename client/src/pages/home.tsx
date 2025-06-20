@@ -8,12 +8,11 @@ import ImageColorExtractor from "@/components/image-color-extractor";
 import ColorConverter from "@/components/color-converter";
 import PaletteGenerator from "@/components/palette-generator";
 import PaletteCard from "@/components/palette-card";
-import TrendingSection from "@/components/trending-section";
-import FeaturesSection from "@/components/features-section";
+
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Palette as PaletteIcon, Shuffle, Plus } from "lucide-react";
+import { Palette as PaletteIcon } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
@@ -94,7 +93,7 @@ export default function Home() {
               <TabsTrigger value="accessibility" className="text-xs sm:text-sm px-2 py-2 font-display">Accessibility</TabsTrigger>
               <TabsTrigger value="extractor" className="text-xs sm:text-sm px-2 py-2 font-display">Image Extract</TabsTrigger>
               <TabsTrigger value="converter" className="text-xs sm:text-sm px-2 py-2 font-display">Converter</TabsTrigger>
-              <TabsTrigger value="generator" className="text-xs sm:text-sm px-2 py-2 font-display">AI Generator</TabsTrigger>
+              <TabsTrigger value="generator" className="text-xs sm:text-sm px-2 py-2 font-display">Palette Gen</TabsTrigger>
             </TabsList>
             
             <TabsContent value="picker">
@@ -144,16 +143,7 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-heading">Beautiful Color Palettes</h2>
               <p className="text-lg sm:text-xl text-gray-600 font-display">Curated collections of harmonious colors for your projects</p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Button className="bg-indigo-600 hover:bg-indigo-700 text-sm sm:text-base font-display">
-                <Plus className="w-4 h-4 mr-2" />
-                Create New
-              </Button>
-              <Button variant="outline" className="text-sm sm:text-base font-display">
-                <Shuffle className="w-4 h-4 mr-2" />
-                Generate Random
-              </Button>
-            </div>
+
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
@@ -162,16 +152,10 @@ export default function Home() {
             ))}
           </div>
           
-          <div className="text-center mt-8 sm:mt-12">
-            <Button variant="outline" size="lg" className="text-sm sm:text-base font-display">
-              Load More Palettes
-            </Button>
-          </div>
+
         </div>
       </section>
 
-      <TrendingSection />
-      <FeaturesSection />
       <Footer />
     </div>
   );

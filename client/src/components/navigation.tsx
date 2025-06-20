@@ -40,15 +40,7 @@ export default function Navigation() {
             >
               Tools
             </button>
-            <button 
-              onClick={() => scrollToSection('trends')}
-              className="text-gray-600 hover:text-indigo-600 transition-colors"
-            >
-              Trends
-            </button>
-            <Button className="bg-indigo-600 hover:bg-indigo-700">
-              Sign Up
-            </Button>
+
           </div>
           
           <button 
@@ -80,15 +72,7 @@ export default function Navigation() {
               >
                 Tools
               </button>
-              <button 
-                onClick={() => { scrollToSection('trends'); setIsMenuOpen(false); }}
-                className="text-gray-600 hover:text-indigo-600 transition-colors text-left"
-              >
-                Trends
-              </button>
-              <Button className="bg-indigo-600 hover:bg-indigo-700 w-fit">
-                Sign Up
-              </Button>
+
             </div>
           </div>
         )}
