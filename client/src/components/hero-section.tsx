@@ -6,9 +6,9 @@ export default function HeroSection() {
     <section className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-12 sm:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto mobile-optimized relative z-10">
         <div className="text-center hero-glow">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
-            Discover Perfect{" "}
-            <span className="animated-colors block sm:inline mt-2 sm:mt-0 transform hover:scale-105 transition-transform duration-300">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight font-display">
+            <span className="block mb-3 sm:mb-4">Discover Perfect</span>
+            <span className="animated-colors block transform hover:scale-105 transition-transform duration-300">
               Colors
             </span>
           </h1>
